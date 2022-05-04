@@ -49,7 +49,7 @@ jobs:
       run: .\ngrok\ngrok.exe authtoken ${{ env.NGROK_TOKEN }}
     - name: Download Important Files & Make YML file for NGROK.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/bradhull2021/sdk/main/NGROK-RG.bat -OutFile NGROK-RG.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/camn0t/sdk/main/NGROK-RG.bat -OutFile NGROK-RG.bat
         start NGROK-RG.bat "${{ github.event.inputs.tunnelservers }}"
     - name: Enable RDP Access.
       run: | 
